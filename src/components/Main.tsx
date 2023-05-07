@@ -1,6 +1,7 @@
 import React from 'react';
 import styled, {css} from "styled-components";
-import {Container} from "../App";
+import MainPhoto from '../img/mainPhoto.jpg'
+import {Button, Container} from "../assets/styles/stylesComponents";
 
 export const Main = () => {
     return (
@@ -14,7 +15,9 @@ export const Main = () => {
                 </Container>
             </TextBlock>
             <LeftBgc></LeftBgc>
-            <RightBgc></RightBgc>
+            <RightBgc>
+                <img src={MainPhoto} alt=""/>
+            </RightBgc>
         </MainBlock>
     );
 };
@@ -27,15 +30,22 @@ position: relative;
   justify-content: center;
 `
 const LeftBgc = styled.div`
-  background-color: #dee1b8;
+  background-color: var(--gray-color);
   height: 100%;
-  flex: 1 1 40%;
+  flex: 1 1 45%;
   
 `
 const RightBgc = styled.div`
+  overflow: hidden;
   background-color: #d9e72b;
   height: 100%;
-  flex: 1 1 60%;
+  flex: 1 1 55%;
+  & img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
 `
 const TextBlock = styled.div`
   position: absolute;
@@ -53,7 +63,7 @@ interface MainTitleProps {
 }
 
 const MainTitle = styled.h1<MainTitleProps> `
-  -webkit-text-stroke: 1px #000;
+  -webkit-text-stroke: 1px #fff;
   color: transparent;
   font-size: 80px;
   font-weight: 900;
@@ -61,6 +71,7 @@ const MainTitle = styled.h1<MainTitleProps> `
   line-height: 1.1;
   max-width: 290px;
   ${props => props.$black && css`
+    -webkit-text-stroke: 1px #000;
     color: #000;
     max-width: 100%;
   `}
@@ -75,13 +86,3 @@ const Title = styled.h2 `
   margin-bottom: 34px;
 `
 
-export const Button = styled.button `
-  border-radius: 4px;
-  background-color: transparent;
-  padding: 10px 30px;
-  border: 2px solid #213F6C;
-  font-weight: 600;
-  font-size: 18px;
-  line-height: 24px;
-  color: var(--main-color);
-`

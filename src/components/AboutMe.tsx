@@ -1,7 +1,12 @@
 import React from 'react';
-import {Container} from "../App";
-import {Button} from "./Main";
-import styled from "styled-components";
+import styled, {css} from "styled-components";
+import IconTg from '../img/social-icon/tg.svg'
+import IconInst from '../img/social-icon/inst2.svg'
+import IconMail from '../img/social-icon/email.svg'
+import IconLn from '../img/social-icon/linkedin2.svg'
+import IconGit from '../img/social-icon/github.svg'
+import AboutMePhoto from '../img/aboutMePhoto.jpg'
+import {Button, Container, Section, SectionTitle} from "../assets/styles/stylesComponents";
 
 const AboutMe = () => {
     return (
@@ -11,9 +16,7 @@ const AboutMe = () => {
                 <AboutMeBlock>
                     <AboutMeLeft>
                         <MePhoto>
-                            <img
-                                src="http://flomaster.club/uploads/posts/2021-11/1637749496_1-flomaster-club-p-chelovek-risunok-dlya-detei-detskie-1.jpg"
-                                alt=""/>
+                            <img src={AboutMePhoto} alt=""/>
                         </MePhoto>
                     </AboutMeLeft>
                     <AboutMeRight>
@@ -23,32 +26,43 @@ const AboutMe = () => {
                             Hi! My name is Albert Walkers. I am a Web Developer, and I'm very passionate and dedicated
                             to
                             my work. With 20 years experience as a professional Web developer, I have acquired the
+                        </AboutMeText>
+                        <AboutMeText>
+                            Hi! My name is Albert Walkers. I am a Web Developer, and I'm very passionate and dedicated
+                            to
+                            my work. With 20 years experience as a professional Web developer, I have acquired the
                             skills and knowledge necessary to make your project a success.
                         </AboutMeText>
-                        <table>
-                            <Table>
-                                <TableRow>
-                                    <td>Age:</td>
-                                    <td>24</td>
-                                </TableRow>
-                                <TableRow>
-                                    <td>English:</td>
-                                    <td>Pre-Intermediate</td>
-                                </TableRow>
-                                <TableRow>
-                                    <td>Phone:</td>
-                                    <td>+7-964-614-58-37</td>
-                                </TableRow>
-                                <TableRow>
-                                    <td>Location:</td>
-                                    <td>Saint-Petersburg</td>
-                                </TableRow>
-                                <TableRow>
-                                    <td>Mail:</td>
-                                    <td>akr6363@mail.ru</td>
-                                </TableRow>
-                            </Table>
-                        </table>
+
+                        <Table>
+                            <TableRow>
+                                <td>Age:</td>
+                                <td>24</td>
+                            </TableRow>
+                            <TableRow>
+                                <td>English:</td>
+                                <td>Pre-Intermediate</td>
+                            </TableRow>
+                            <TableRow>
+                                <td>Phone:</td>
+                                <td>+7-964-614-58-37</td>
+                            </TableRow>
+                            <TableRow>
+                                <td>Location:</td>
+                                <td>Saint-Petersburg</td>
+                            </TableRow>
+                            <TableRow>
+                                <td>Mail:</td>
+                                <td>akr6363@mail.ru</td>
+                            </TableRow>
+                        </Table>
+                        <SocialBlock>
+                            <a href='#'><img src={IconTg} alt=""/></a>
+                            <a href='#'><img src={IconInst} alt=""/></a>
+                            <a href='#'><img src={IconMail} alt=""/></a>
+                            <a href='#'><img src={IconLn} alt=""/></a>
+                            <a href='#'><img src={IconGit} alt=""/></a>
+                        </SocialBlock>
                         <Button>Download CV</Button>
                     </AboutMeRight>
                 </AboutMeBlock>
@@ -59,18 +73,42 @@ const AboutMe = () => {
 
 export default AboutMe;
 
-const Section = styled.div`
-  margin: 100px 0;
+const SocialBlock = styled.div`
+  display: flex;
+  margin-bottom: 20px;
+
+  & a {
+    display: block;
+    width: 20px;
+    height: 20px;
+  }
+
+  & a:not(:last-child) {
+    margin-right: 10px;
+  }
 `
+
 
 const AboutMeBlock = styled.div`
   display: flex;
 `
 const AboutMeLeft = styled.div`
-  flex: 1 1 40%;
+  position: relative;
+  flex: 1 1 50%;
+
+  &:before {
+    content: "";
+    background-color: var(--gray-color);
+    width: 85%;
+    height: 100%;
+    position: absolute;
+    bottom: -10%;
+    left: -10%;
+    z-index: 0;
+  }
 `
 const AboutMeRight = styled.div`
-  flex: 1 1 60%;
+  flex: 1 1 50%;
 `
 
 const MePhoto = styled.div`
@@ -79,38 +117,38 @@ const MePhoto = styled.div`
   height: 100%;
   margin-right: 68px;
 
+
   & img {
+    width: 100%;
     position: absolute;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
   }
 `
-const SectionTitle = styled.h2`
-  font-weight: 700;
-  font-size: 30px;
-  line-height: 45px;
-  margin-bottom: 72px;
-`
+
 const AboutMeTitle = styled.p`
-  font-weight: 700;
-  font-size: 24px;
+  font-weight: 500;
+  font-size: 26px;
+  text-transform: uppercase;
   line-height: 163.5%;
 `
 
 const AboutMeSubTitle = styled.p`
-  font-weight: 600;
-  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 16px;
   line-height: 163.5%;
   color: var(--main-color);
-  margin-bottom: 32px;
+  margin-bottom: 20px;
 `
 const AboutMeText = styled.p`
-  margin-bottom: 24px;
+  margin-bottom: 20px;
+  line-height: 28px;
 `
 
 const TableRow = styled.tr`
   & td {
-    padding: 6px 0;
+    padding: 4px 0;
   }
 
   & td:first-child {
@@ -123,5 +161,5 @@ const TableRow = styled.tr`
 `
 
 const Table = styled.table`
-  margin-bottom: 32px;
+  margin-bottom: 20px;
 `

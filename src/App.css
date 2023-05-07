@@ -1,5 +1,9 @@
 :root {
-    --main-color: #213F6C;
+    /*--main-color: #213F6C;*/
+    --main-color: #20c997;
+    --gray-color: #4c4d4d;
+    --dark-gray-color: #212529;
+    --light-gray-color: #a8a8a8;
 }
 
 html {
@@ -26,11 +30,7 @@ body {
     font-weight: 400;
     font-size: 15px;
     line-height: 22px;
-    /*font-size: 16px;*/
-    /*font-weight: 400;*/
-    /*line-height: 200%;*/
-    /*color: #333;*/
-    /*background: #fff;*/
+    color: white;
 }
 
 ul {
