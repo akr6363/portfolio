@@ -7,6 +7,7 @@ import IconLn from '../img/social-icon/linkedin2.svg'
 import IconGit from '../img/social-icon/github.svg'
 import AboutMePhoto from '../img/aboutMePhoto.jpg'
 import {Button, Container, Section, SectionTitle} from "../assets/styles/stylesComponents";
+import {SocialNetworks} from "./SocialNetworks";
 
 const AboutMe = () => {
     return (
@@ -56,13 +57,7 @@ const AboutMe = () => {
                                 <td>akr6363@mail.ru</td>
                             </TableRow>
                         </Table>
-                        <SocialBlock>
-                            <a href='#'><img src={IconTg} alt=""/></a>
-                            <a href='#'><img src={IconInst} alt=""/></a>
-                            <a href='#'><img src={IconMail} alt=""/></a>
-                            <a href='#'><img src={IconLn} alt=""/></a>
-                            <a href='#'><img src={IconGit} alt=""/></a>
-                        </SocialBlock>
+                        <SocialNetworks/>
                         <Button>Download CV</Button>
                     </AboutMeRight>
                 </AboutMeBlock>
@@ -72,21 +67,6 @@ const AboutMe = () => {
 };
 
 export default AboutMe;
-
-const SocialBlock = styled.div`
-  display: flex;
-  margin-bottom: 20px;
-
-  & a {
-    display: block;
-    width: 20px;
-    height: 20px;
-  }
-
-  & a:not(:last-child) {
-    margin-right: 10px;
-  }
-`
 
 
 const AboutMeBlock = styled.div`
@@ -108,6 +88,7 @@ const AboutMeLeft = styled.div`
   }
 `
 const AboutMeRight = styled.div`
+  color: var(--light-gray-color);
   flex: 1 1 50%;
 `
 
@@ -127,6 +108,7 @@ const MePhoto = styled.div`
 `
 
 const AboutMeTitle = styled.p`
+  color: #fff;
   font-weight: 500;
   font-size: 26px;
   text-transform: uppercase;
@@ -142,6 +124,7 @@ const AboutMeSubTitle = styled.p`
   margin-bottom: 20px;
 `
 const AboutMeText = styled.p`
+
   margin-bottom: 20px;
   line-height: 28px;
 `

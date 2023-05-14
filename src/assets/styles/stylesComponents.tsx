@@ -2,6 +2,7 @@ import styled, {css} from "styled-components";
 
 interface ContainerProps {
     $alignRight?: boolean;
+    $contactsContainer?: boolean
 }
 export const Container = styled.div<ContainerProps> `
   width: 100%;
@@ -11,6 +12,9 @@ export const Container = styled.div<ContainerProps> `
   ${props => props.$alignRight && css`
     display: flex;
     justify-content: end;
+  `}
+  ${props => props.$contactsContainer && css`
+    display: flex;
   `}
 `
 
@@ -24,6 +28,7 @@ export const Section = styled.div<SectionProps>`
   background-color: var(--dark-gray-color);
   ${props => props.$gray && css`
     background-color: var(--gray-color);
+    //background-image: url("https://7themes.su/_ph/21/469525547.jpg");
   `}
 `
 
@@ -33,7 +38,8 @@ export const SectionTitle = styled.h2`
   font-size: 40px;
   line-height: 45px;
   margin-bottom: 52px;
-  color: var(--light-gray-color)
+  //color: var(--light-gray-color)
+  color: #fff
 `
 
 export const Button = styled.button `
