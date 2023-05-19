@@ -9,6 +9,9 @@ export const Container = styled.div<ContainerProps> `
   max-width: 1120px;
   padding: 0 50px;
   margin: 0 auto;
+  @media (max-width: 769px) {
+    padding: 0 15px;
+  }
   ${props => props.$alignRight && css`
     display: flex;
     justify-content: end;
@@ -25,6 +28,12 @@ interface SectionProps {
 
 export const Section = styled.div<SectionProps>`
   padding: 100px 0;
+  @media (max-width: 768px) {
+    padding: 60px 0;
+  }
+  @media (max-width: 481px) {
+    padding: 40px 0;
+  }
   background-color: var(--dark-gray-color);
   ${props => props.$gray && css`
     background-color: var(--gray-color);
@@ -39,7 +48,16 @@ export const SectionTitle = styled.h2`
   line-height: 45px;
   margin-bottom: 52px;
   //color: var(--light-gray-color)
-  color: #fff
+  color: #fff;
+  @media (max-width: 768px) {
+    font-size: 30px;
+    margin-bottom: 30px;
+  }
+  @media (max-width: 481px) {
+    margin-bottom: 20px;
+  }
+  
+  
 `
 
 export const Button = styled.button `

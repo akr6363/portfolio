@@ -1,14 +1,18 @@
-import React from 'react';
+import React, {FC} from 'react';
 import IconTg from "../img/social-icon/tg.svg";
 import IconInst from "../img/social-icon/inst2.svg";
 import IconMail from "../img/social-icon/email.svg";
 import IconLn from "../img/social-icon/linkedin2.svg";
 import IconGit from "../img/social-icon/github.svg";
-import styled from "styled-components";
+import styled, {css} from "styled-components";
 
-export const SocialNetworks = () => {
+type SocialNetworksPropsType = {
+    style?: {}
+}
+
+export const SocialNetworks: FC<SocialNetworksPropsType> = ({style}) => {
     return (
-        <SocialBlock>
+        <SocialBlock style={style}>
             <a href='#'><img src={IconTg} alt=""/></a>
             <a href='#'><img src={IconInst} alt=""/></a>
             <a href='#'><img src={IconMail} alt=""/></a>
@@ -21,7 +25,9 @@ export const SocialNetworks = () => {
 
 const SocialBlock = styled.div`
   display: flex;
-  margin-bottom: 20px;
+  //margin-bottom: 20px;
+  align-items: center;
+ 
 
   & a {
     display: block;

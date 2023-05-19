@@ -46,6 +46,7 @@ const HeaderBlock = styled.div`
 
 const Nav = styled.ul`
   display: flex;
+  flex-wrap: wrap;
   & li:not(:last-child) {
     margin-right: 36px;
     

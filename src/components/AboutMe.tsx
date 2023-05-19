@@ -57,7 +57,7 @@ const AboutMe = () => {
                                 <td>akr6363@mail.ru</td>
                             </TableRow>
                         </Table>
-                        <SocialNetworks/>
+                        <SocialNetworks style={{ marginBottom: "25px" }}/>
                         <Button>Download CV</Button>
                     </AboutMeRight>
                 </AboutMeBlock>
@@ -71,10 +71,14 @@ export default AboutMe;
 
 const AboutMeBlock = styled.div`
   display: flex;
+  @media (max-width: 1025px) {
+    flex-direction: column;
+  }
 `
 const AboutMeLeft = styled.div`
   position: relative;
   flex: 1 1 50%;
+
 
   &:before {
     content: "";
@@ -85,6 +89,9 @@ const AboutMeLeft = styled.div`
     bottom: -10%;
     left: -10%;
     z-index: 0;
+    @media (max-width: 1200px) {
+      display: none;
+    }
   }
 `
 const AboutMeRight = styled.div`
@@ -97,13 +104,28 @@ const MePhoto = styled.div`
   position: relative;
   height: 100%;
   margin-right: 68px;
-
+  @media (max-width: 1025px) {
+    padding-top: 60%;
+    margin-right: 0;
+    margin-bottom: 20px;
+    @media (max-width: 768px) {
+      padding-top: 80%;
+    }
+  }
 
   & img {
     width: 100%;
     position: absolute;
+    left: 0;
+    top: 0;
     height: 100%;
     object-fit: cover;
+    @media (max-width: 1025px) {
+      object-fit: contain;
+    }
+    @media (max-width: 768px) {
+      object-fit: cover;
+    }
   }
 `
 
@@ -113,6 +135,9 @@ const AboutMeTitle = styled.p`
   font-size: 26px;
   text-transform: uppercase;
   line-height: 163.5%;
+  @media (max-width: 768px) {
+    font-size: 20px;
+  }
 `
 
 const AboutMeSubTitle = styled.p`

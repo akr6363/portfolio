@@ -14,10 +14,12 @@ export const Contacts = () => {
                         soon as I receive your message.</p>
                     <p>or connect with me via phone:</p>
                     <span>+7-964-614-58-37</span>
+                    <ContactsForm action="">
                     <ContactsInput type="text" placeholder={'Name'}/>
                     <ContactsInput type="text" placeholder={'Email'}/>
                     <ContactsTextarea placeholder={'Your message'}></ContactsTextarea>
                     <Button>Send</Button>
+                    </ContactsForm>
                 </ContactsContainer>
             </Container>
         </Section>
@@ -30,12 +32,14 @@ export const Contacts = () => {
 const ContactsContainer = styled.div `
     display: flex;
   flex-direction: column;
-  flex: 0 1 50%;
+  //flex: 0 1 50%;
+  
   & p {
     font-weight: 400;
     font-size: 15px;
     line-height: 22px;
     margin-bottom: 14px;
+    max-width: 600px;
   }
   & span {
     font-weight: 700;
@@ -70,7 +74,10 @@ const ContactsInput = styled.input `
   ${inputs}
 `
 
-
+const ContactsForm = styled.form `
+ display: flex;
+  flex-direction: column;
+`
 
 
 

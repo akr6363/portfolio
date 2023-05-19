@@ -29,7 +29,7 @@ const ProjectItem: React.FC<ProjectItemType> = ({title, description, img}) => {
 
 export default ProjectItem;
 
-const HoverBlock = styled.div`
+export const HoverBlock = styled.div`
   position: absolute;
   left: 0;
   top: 0;
@@ -51,6 +51,10 @@ const ProjectItemBlock = styled.div`
   padding: 0 15px;
   @media (max-width: 770px) {
     flex: 1 1 50%;;
+  }
+  @media (max-width: 450px) {
+    flex: 1 1 100%;
+    margin-bottom: 25px;
   }
 `
 const ProjectImg = styled.div`
