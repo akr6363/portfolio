@@ -13,15 +13,15 @@ const SkillsItem: React.FC<SkillsItemType> = ({icon, title, isMain, desc}) => {
         <SkillsItemBlock isMain={isMain}>
             <SkillImg isMain={isMain}>
                 <img src={icon} alt=""/>
-                <BorderTopBottom className={'tb'}></BorderTopBottom>
-                <BorderLeftRight className={'lr'}></BorderLeftRight>
+                {/*<BorderTopBottom className={'tb'}></BorderTopBottom>*/}
+                {/*<BorderLeftRight className={'lr'}></BorderLeftRight>*/}
             </SkillImg>
             <div>
             <SkillsTitle>{title}</SkillsTitle>
-            {/*{desc &&*/}
-            {/*    <SkillDesc>*/}
-            {/*        {desc}*/}
-            {/*    </SkillDesc>}*/}
+            {desc &&
+                <SkillDesc>
+                    {desc}
+                </SkillDesc>}
             </div>
         </SkillsItemBlock>
     );
@@ -34,6 +34,7 @@ interface SkillsItemBlockProps {
 }
 
 const SkillDesc = styled.p`
+  margin-top: 10px;
   color: var(--light-gray-color);
   text-align: center;
 `
@@ -49,6 +50,12 @@ const SkillsItemBlock = styled.div<SkillsItemBlockProps>`
   padding: 20px 10px;
   ${props => props.isMain && css`
     flex: 1 1 25%;
+    @media (max-width: 1024px) {
+      flex: 1 1 50%;
+    }
+    @media (max-width: 490px) {
+      flex: 1 1 100%;
+    }
   `}
 `
 const SkillImg = styled.div<SkillsItemBlockProps>`
@@ -56,7 +63,7 @@ const SkillImg = styled.div<SkillsItemBlockProps>`
   flex: 1 1 auto;
   width: 100%;
   padding: 5%;
-  background-color: var(--dark-gray-color);
+
   //border: 1px solid #D1D1D1;
   max-height: 110px;
   max-width: 150px;
@@ -68,8 +75,8 @@ const SkillImg = styled.div<SkillsItemBlockProps>`
 
   &:hover {
     transition: scale 0.3s ease;
-    scale: 1.1;
-
+    scale: 1.2;
+   // background-color: var(--dark-gray-color);
     .tb:after,
     .tb:before {
       width: 100%;
@@ -92,7 +99,7 @@ const SkillImg = styled.div<SkillsItemBlockProps>`
 `
 const SkillsTitle = styled.h4 `
   text-align: center;
-  margin-top: 22px;
+  margin-top: 15px;
   text-transform: uppercase;
   color: #fff;
 `

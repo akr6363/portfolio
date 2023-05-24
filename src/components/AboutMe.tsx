@@ -1,11 +1,6 @@
 import React from 'react';
 import styled, {css} from "styled-components";
-import IconTg from '../img/social-icon/tg.svg'
-import IconInst from '../img/social-icon/inst2.svg'
-import IconMail from '../img/social-icon/email.svg'
-import IconLn from '../img/social-icon/linkedin2.svg'
-import IconGit from '../img/social-icon/github.svg'
-import AboutMePhoto from '../img/aboutMePhoto.jpg'
+import AboutMePhoto from '../img/aboutMePhoto.png'
 import {Button, Container, Section, SectionTitle} from "../assets/styles/stylesComponents";
 import {SocialNetworks} from "./SocialNetworks";
 
@@ -35,28 +30,28 @@ const AboutMe = () => {
                             skills and knowledge necessary to make your project a success.
                         </AboutMeText>
 
-                        <Table>
-                            <TableRow>
-                                <td>Age:</td>
-                                <td>24</td>
-                            </TableRow>
-                            <TableRow>
-                                <td>English:</td>
-                                <td>Pre-Intermediate</td>
-                            </TableRow>
-                            <TableRow>
-                                <td>Phone:</td>
-                                <td>+7-964-614-58-37</td>
-                            </TableRow>
-                            <TableRow>
-                                <td>Location:</td>
-                                <td>Saint-Petersburg</td>
-                            </TableRow>
-                            <TableRow>
-                                <td>Mail:</td>
-                                <td>akr6363@mail.ru</td>
-                            </TableRow>
-                        </Table>
+                        {/*<Table>*/}
+                        {/*    <TableRow>*/}
+                        {/*        <td>Age:</td>*/}
+                        {/*        <td>24</td>*/}
+                        {/*    </TableRow>*/}
+                        {/*    <TableRow>*/}
+                        {/*        <td>English:</td>*/}
+                        {/*        <td>Pre-Intermediate</td>*/}
+                        {/*    </TableRow>*/}
+                        {/*    <TableRow>*/}
+                        {/*        <td>Phone:</td>*/}
+                        {/*        <td>+7-964-614-58-37</td>*/}
+                        {/*    </TableRow>*/}
+                        {/*    <TableRow>*/}
+                        {/*        <td>Location:</td>*/}
+                        {/*        <td>Saint-Petersburg</td>*/}
+                        {/*    </TableRow>*/}
+                        {/*    <TableRow>*/}
+                        {/*        <td>Mail:</td>*/}
+                        {/*        <td>akr6363@mail.ru</td>*/}
+                        {/*    </TableRow>*/}
+                        {/*</Table>*/}
                         <SocialNetworks style={{ marginBottom: "25px" }}/>
                         <Button>Download CV</Button>
                     </AboutMeRight>
@@ -79,22 +74,26 @@ const AboutMeLeft = styled.div`
   position: relative;
   flex: 1 1 50%;
 
-
-  &:before {
-    content: "";
-    background-color: var(--gray-color);
-    width: 85%;
-    height: 100%;
-    position: absolute;
-    bottom: -10%;
-    left: -10%;
-    z-index: 0;
-    @media (max-width: 1200px) {
-      display: none;
-    }
-  }
+  //
+  //&:before {
+  //  content: "";
+  //  background-color: var(--gray-color);
+  //  width: 85%;
+  //  height: 100%;
+  //  position: absolute;
+  //  bottom: -10%;
+  //  left: -10%;
+  //  z-index: 0;
+  //  @media (max-width: 1200px) {
+  //    display: none;
+  //  }
+  //}
 `
 const AboutMeRight = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
   color: var(--light-gray-color);
   flex: 1 1 50%;
 `
@@ -115,17 +114,21 @@ const MePhoto = styled.div`
 
   & img {
     width: 100%;
-    position: absolute;
+
     left: 0;
     top: 0;
     height: 100%;
-    object-fit: cover;
-    @media (max-width: 1025px) {
-      object-fit: contain;
+    object-fit: contain;
+    object-position: center center;
+    @media (max-width: 1024px) {
+      position: absolute;
     }
-    @media (max-width: 768px) {
-      object-fit: cover;
-    }
+    //@media (max-width: 1025px) {
+    //  object-fit: contain;
+    //}
+    //@media (max-width: 768px) {
+    //  object-fit: cover;
+    //}
   }
 `
 

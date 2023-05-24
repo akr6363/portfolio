@@ -23,8 +23,8 @@ const descJs = 'Experienced in using ES6 features, such as Promises, Classes, De
 const descTs = 'Used TypeScript for developing easily scalable and sustainable application.'
 const mainSkillsItems = [
     {icon: IconReact, title: 'React', desc:descReact},
-    {icon: IconJs, title: 'JavaScript', desc: descRedux},
     {icon: IconRedux, title: 'Redux', desc: descJs},
+    {icon: IconJs, title: 'JavaScript', desc: descRedux},
     {icon: IconTs, title: 'TypeScript', desc: descTs},
 
 ]

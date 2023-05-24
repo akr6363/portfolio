@@ -1,6 +1,6 @@
 import React from 'react';
 import styled, {css} from "styled-components";
-// import MainPhoto from '../img/mainPhoto.jpg'
+import MainPhoto from '../img/mainPhoto.jpg'
 import {Button, Container} from "../assets/styles/stylesComponents";
 import {HoverBlock} from "./Projects/ProjectItem";
 
@@ -17,7 +17,7 @@ export const Main = () => {
             </TextBlock>
             <LeftBgc></LeftBgc>
             <RightBgc>
-                {/*<img src={MainPhoto} alt=""/>*/}
+                <img src={MainPhoto} alt=""/>
                 <HoverBlock/>
             </RightBgc>
         </MainBlock>

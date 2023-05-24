@@ -1,12 +1,32 @@
-import React from 'react';
+import React, {useState} from 'react';
 import styled from "styled-components";
 import {Container} from "../assets/styles/stylesComponents";
 
 
 
 export const Header = () => {
+
+    const [scrolling, setScrolling] = useState(false);
+
+    const handleScroll = () => {
+        const scrollY = window.scrollY;
+        if (scrollY > 0) {
+            console.log('dsfdf')
+            setScrolling(true);
+        } else {
+            setScrolling(false);
+        }
+    };
+
+    const headerStyle = {
+        backgroundColor: scrolling ? '#333' : 'transparent',
+        // Другие стили хедера
+    };
+
+
+
     return (
-        <HeaderBlock>
+        <HeaderBlock style={headerStyle} onScroll={handleScroll}>
             <Container $alignRight>
                 <Nav>
                     <li><a href="#">Home</a></li>
@@ -55,6 +75,11 @@ const Nav = styled.ul`
     font-weight: 600;
     font-size: 15px;
     line-height: 24px;
+    transition: all 0.3s ease-in-out;
+    :hover {
+      color: var(--main-color);
+      transition: all 0.3s ease-in-out;
+    }
     
   }
 

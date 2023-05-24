@@ -47,7 +47,7 @@ const ProjectItemBlock = styled.div`
   display: flex;
   flex-direction: column;
   flex: 0 1 calc(100% / 3);
-  margin-bottom: 20px;
+  margin-bottom: 50px;
   padding: 0 15px;
   @media (max-width: 770px) {
     flex: 1 1 50%;;
@@ -81,10 +81,12 @@ const ProjectImg = styled.div`
 `
 
 const ProjectDesc = styled.p`
+
   display: block;
   color: var(--light-gray-color);
 `
 const ProjectTitle = styled.h4`
+
   display: inline-block;
   position: relative;
   font-size: 18px;
