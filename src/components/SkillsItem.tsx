@@ -39,7 +39,10 @@ const SkillDesc = styled.p`
   text-align: center;
 `
 const SkillsItemBlock = styled.div<SkillsItemBlockProps>`
+    flex: 1 1 16.666%;
+  @media (max-width: 900px) {
     flex: 1 1 20%;
+  }
   @media (max-width: 490px) {
     flex: 1 1 50%;
   }
@@ -107,7 +110,7 @@ const SkillsTitle = styled.h4 `
 const border = css`
   content: "";
   position: absolute;
-  background: #a8a8a8;
+  background: var(--light-gray-color);
   //background: hsla(0, 0%, 100%, .5);
   transition: all 0.5s ease;
 `

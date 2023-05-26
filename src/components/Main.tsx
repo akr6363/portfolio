@@ -30,6 +30,7 @@ const MainBlock = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+
 `
 const LeftBgc = styled.div`
   background-color: var(--gray-color);

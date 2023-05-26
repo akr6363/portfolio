@@ -15,6 +15,9 @@ import IconStorybook from '../img/storybook.png'
 import IconCss from '../img/css.png'
 import IconFigma from '../img/figma.png'
 import IconStyled from '../img/styled.png'
+import IconSass from '../img/Sass.png'
+import IconPostman from '../img/postman.png'
+
 import {Container, Section, SectionTitle} from "../assets/styles/stylesComponents";
 
 const descReact = 'Used React library for developing UI of SPA. Experienced in creating functional components with Hooks as well as class components. Used HOC to reuse component logic and optimize performance with React.memo.'
@@ -38,7 +41,9 @@ const secondSkillsItems = [
     {icon: IconStorybook, title: 'Storybook'},
     {icon: IconCss, title: 'CSS'},
     {icon: IconFigma, title: 'Figma'},
+    {icon: IconSass, title: 'Sass'},
     {icon: IconStyled, title: 'Styled components'},
+    {icon: IconPostman, title: 'Postman'},
 ]
 
 const Skills = () => {

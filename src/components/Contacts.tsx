@@ -55,7 +55,7 @@ const inputs = css`
   border: 1px solid #fff;
   border-radius: 5px;
   font-weight: 400;
-  font-size: 10px;
+  font-size: 15px;
   line-height: 15px;
   padding: 10px 12px;
   background: transparent;
