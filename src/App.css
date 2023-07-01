@@ -2,7 +2,7 @@
 :root {
     /*--main-color: #213F6C;*/
     --main-color: #20c997;
-    --gray-color: #4c4d4d;
+    --gray-color: #343a40;
     --dark-gray-color: #212529;
     --light-gray-color: #a8a8a8;
 }
@@ -50,3 +50,4 @@ h1, h2, h3, h4, h5, h6, p {
 .scrolled {
 
 }
+

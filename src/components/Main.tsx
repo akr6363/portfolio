@@ -1,17 +1,27 @@
 import React from 'react';
 import styled, {css} from "styled-components";
-import MainPhoto from '../img/mainPhoto.jpg'
+import MainPhoto from '../img/mainPhoto3.jpg'
 import {Button, Container} from "../assets/styles/stylesComponents";
 import {HoverBlock} from "./Projects/ProjectItem";
+import ReactTypingEffect from "react-typing-effect";
+
 
 export const Main = () => {
     return (
-        <MainBlock>
+        <MainBlock id={'home'}>
             <TextBlock>
                 <Container>
                     <MainTitle>Hi, I'm ANYA</MainTitle>
                     <MainTitle $black>KRASILNIKOVA</MainTitle>
-                    <Title>Frontend developer</Title>
+                    <Title>
+                    <ReactTypingEffect
+                        text={["Frontend developer."]}
+                        speed={90}
+                        typingDelay={500}
+                        eraseSpeed={90}
+                        eraseDelay={200}
+                    />
+                    </Title>
                     <Button>Hire me</Button>
                 </Container>
             </TextBlock>
@@ -53,12 +63,14 @@ const RightBgc = styled.div`
     object-fit: cover;
     object-position: center;
   }
-
+  & div {
+    opacity: 0.6;
+  }
   @media (max-width: 1025px) {
     & div {
       opacity: 0.8;
     }
-  }
+  
 `
 const TextBlock = styled.div`
   z-index: 1;

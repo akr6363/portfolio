@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import styled, {css} from "styled-components";
 import {Container} from "../assets/styles/stylesComponents";
-
+import {Link, Button, Element, Events, animateScroll as scroll, scrollSpy, scroller} from 'react-scroll'
 
 
 export const Header = () => {
@@ -26,11 +26,31 @@ export const Header = () => {
         <HeaderBlock $scrolled={scrolled}>
             <Container $alignRight>
                 <Nav>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About me</a></li>
-                    <li><a href="#">Skills</a></li>
-                    <li><a href="#">Projects</a></li>
-                    <li><a href="#">Contacts</a></li>
+                    <li>
+                        <Link activeClass="active" to="home" spy={true} smooth={true} duration={500}>
+                            Home
+                        </Link>
+                    </li>
+                    <li>
+                        <Link activeClass="active" to="about-me" spy={true} smooth={true} duration={500}>
+                            About me
+                        </Link>
+                    </li>
+                    <li>
+                        <Link activeClass="active" to="skills" spy={true} smooth={true} duration={500}>
+                            Skills
+                        </Link>
+                    </li>
+                    <li>
+                        <Link activeClass="active" to="projects" spy={true} smooth={true} duration={500}>
+                            Projects
+                        </Link>
+                    </li>
+                    <li>
+                        <Link activeClass="active" to="contacts" spy={true} smooth={true} duration={500}>
+                            Contacts
+                        </Link>
+                    </li>
                 </Nav>
             </Container>
         </HeaderBlock>
@@ -61,6 +81,7 @@ const HeaderBlock = styled.div<HeaderBlockProps>`
   & .header_container {
     margin: 0;
   }
+
   ${props => props.$scrolled && css`
     position: fixed;
     background-color: var(--gray-color);
@@ -74,27 +95,41 @@ const HeaderBlock = styled.div<HeaderBlockProps>`
 const Nav = styled.ul`
   display: flex;
   flex-wrap: wrap;
+
   li {
     position: relative;
+
     :hover a:before {
       scale: 1;
-      transition: scale 0.3s ease-in-out; 
+      transition: scale 0.3s ease-in-out;
+    }
+
+    a.active {
+      :before {
+        scale: 1;
+      }
+
+      color: var(--main-color);
     }
   }
-  
+
+
   & li:not(:last-child) {
     margin-right: 36px;
-    
+
   }
+
   & a {
     font-weight: 600;
     font-size: 15px;
     line-height: 24px;
     transition: color 0.3s ease-in-out;
+
     :hover {
       color: var(--main-color);
       transition: color 0.3s ease-in-out;
     }
+
     :before {
       position: absolute;
       content: '';
@@ -106,7 +141,7 @@ const Nav = styled.ul`
       scale: 0;
       transition: scale 0.3s ease-in-out;
     }
-    
+
   }
 
 `

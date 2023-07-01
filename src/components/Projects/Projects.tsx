@@ -7,7 +7,7 @@ import ImgCRM from '../../assets/images/projects/crm2.jpg'
 import ImgProject from '../../assets/images/projects/project2.jpg'
 import ImgBlanchard from '../../assets/images/projects/Blanchard.jpg'
 import ProjectItem from "./ProjectItem";
-
+const Fade = require("react-reveal/Fade")
 const descriptionForSocialNetwork = 'Social Network SPA created with React JS library, Redux for state management, TypeScript for scalability.'
 const descriptionForTodo = 'Application build with ReactJS/Redux/TypeScript and Material UI library. Using React-hooks, Axios and Rest API'
 const descriptionForCRM = 'customer contact data management system written in vanilla js'
@@ -26,9 +26,10 @@ const projects = [
 
 const Projects = () => {
     return (
-        <Section>
+        <Section id={'projects'}>
             <Container>
                 <SectionTitle>Projects</SectionTitle>
+                <Fade left cascade>
                 <ProjectsRow>
                     {projects.map((pr, ind) => {
                         return (
@@ -36,6 +37,7 @@ const Projects = () => {
                         )
                     })}
                 </ProjectsRow>
+                </Fade>
             </Container>
             
         </Section>

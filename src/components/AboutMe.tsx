@@ -3,10 +3,13 @@ import styled, {css} from "styled-components";
 import AboutMePhoto from '../img/aboutMePhoto.png'
 import {Button, Container, Section, SectionTitle} from "../assets/styles/stylesComponents";
 import {SocialNetworks} from "./SocialNetworks";
+const Fade = require("react-reveal/Fade")
+
 
 const AboutMe = () => {
     return (
-        <Section>
+        <Section id={'about-me'}>
+            <Fade cascade>
             <Container>
                 <SectionTitle>ABOUT ME</SectionTitle>
                 <AboutMeBlock>
@@ -57,6 +60,7 @@ const AboutMe = () => {
                     </AboutMeRight>
                 </AboutMeBlock>
             </Container>
+            </Fade>
         </Section>
     );
 };

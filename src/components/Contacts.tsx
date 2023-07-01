@@ -2,10 +2,11 @@ import React from 'react';
 import {Button, Container, Section, SectionTitle} from "../assets/styles/stylesComponents";
 import styled, {css} from "styled-components";
 import PhoneImg from '../assets/images/contacts.png'
-
+const Fade = require("react-reveal/Fade")
 export const Contacts = () => {
     return (
-        <Section $gray>
+        <Section $gray id={'contacts'}>
+            <Fade cascade>
             <Container $contactsContainer>
                 <ContactsContainer>
                     <SectionTitle>GET IN TOUCH</SectionTitle>
@@ -22,6 +23,7 @@ export const Contacts = () => {
                     </ContactsForm>
                 </ContactsContainer>
             </Container>
+            </Fade>
         </Section>
     );
 };

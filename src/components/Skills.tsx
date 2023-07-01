@@ -17,8 +17,9 @@ import IconFigma from '../img/figma.png'
 import IconStyled from '../img/styled.png'
 import IconSass from '../img/Sass.png'
 import IconPostman from '../img/postman.png'
-
 import {Container, Section, SectionTitle} from "../assets/styles/stylesComponents";
+const Fade = require("react-reveal/Fade")
+// import {Container, Section, SectionTitle} from "../assets/styles/stylesComponents";
 
 const descReact = 'Used React library for developing UI of SPA. Experienced in creating functional components with Hooks as well as class components. Used HOC to reuse component logic and optimize performance with React.memo.'
 const descRedux = 'Implemented Redux for state management of app as BLL. Created reducers for immutable state modification, and used Thunk middleware for asynchronous network requests.'
@@ -48,11 +49,12 @@ const secondSkillsItems = [
 
 const Skills = () => {
     return (
-        <Section $gray>
+        <Section $gray id={'skills'}>
             <Container>
                 <SectionTitle>
                     MY SKILLS
                 </SectionTitle>
+                <Fade left cascade>
                 <MainSkills>
                     {mainSkillsItems.map((skill, ind) => {
                         return (
@@ -61,13 +63,17 @@ const Skills = () => {
                         )
                     })}
                 </MainSkills>
+                    </Fade>
+                <Fade left cascade>
                 <SecondSkills>
                     {secondSkillsItems.map((skill, ind) => {
                         return (
+
                             <SkillsItem key={ind} icon={skill.icon} title={skill.title}/>
                         )
                     })}
                 </SecondSkills>
+                </Fade>
             </Container>
         </Section>
     );

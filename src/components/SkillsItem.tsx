@@ -1,6 +1,6 @@
 import React from 'react';
 import styled, {css} from "styled-components";
-
+const Fade = require("react-reveal/Fade")
 type SkillsItemType = {
     icon: string
     title: string

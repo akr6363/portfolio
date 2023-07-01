@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from "styled-components";
 import {Button} from "../../assets/styles/stylesComponents";
-
+const Fade = require("react-reveal/Fade")
 
 type ProjectItemType = {
     title: string
@@ -31,6 +31,7 @@ export default ProjectItem;
 
 export const HoverBlock = styled.div`
   position: absolute;
+  z-index: 0;
   left: 0;
   top: 0;
   width: 100%;
