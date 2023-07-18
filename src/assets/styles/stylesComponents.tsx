@@ -74,9 +74,14 @@ export const Button = styled.button `
   line-height: 24px;
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
   color: var(--main-color);
-  &:hover {
+  &:disabled {
+    opacity: 0.6;
+    
+  }
+  &:not(:disabled):hover {
     background-color: var(--main-color);
     color: #fff;
     transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
   }
+ 
 `

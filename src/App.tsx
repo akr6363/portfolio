@@ -5,7 +5,7 @@ import {Main} from "./components/Main";
 import AboutMe from "./components/AboutMe";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects/Projects";
-import {Contacts} from "./components/Contacts";
+import {Contacts} from "./components/Contacts/Contacts";
 import {Footer} from "./components/Footer";
 
 function App() {
