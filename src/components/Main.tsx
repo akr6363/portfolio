@@ -4,6 +4,7 @@ import MainPhoto from '../img/mainPhoto3.jpg'
 import {Button, Container} from "../assets/styles/stylesComponents";
 import {HoverBlock} from "./Projects/ProjectItem";
 import ReactTypingEffect from "react-typing-effect";
+import {Link} from "react-scroll";
 
 
 export const Main = () => {
@@ -12,7 +13,7 @@ export const Main = () => {
             <TextBlock>
                 <Container>
                     <MainTitle>Hi, I'm ANYA</MainTitle>
-                    <MainTitle $black>KRASILNIKOVA</MainTitle>
+                    <MainTitle $full>KRASILNIKOVA</MainTitle>
                     <Title>
                     <ReactTypingEffect
                         text={["Frontend developer."]}
@@ -22,7 +23,9 @@ export const Main = () => {
                         eraseDelay={200}
                     />
                     </Title>
-                    <Button>Hire me</Button>
+                    <Link activeClass="active" to="contacts" spy={true} smooth={true} duration={500}>
+                        <Button>Hire me</Button>
+                    </Link>
                 </Container>
             </TextBlock>
             <LeftBgc></LeftBgc>
@@ -53,6 +56,7 @@ const LeftBgc = styled.div`
 `
 const RightBgc = styled.div`
   overflow: hidden;
+  position: relative;
   background-color: #e0e19f;
   height: 100%;
   flex: 1 1 55%;
@@ -91,7 +95,7 @@ const TextBlock = styled.div`
 `
 
 interface MainTitleProps {
-    $black?: boolean;
+    $full?: boolean;
 }
 
 const MainTitle = styled.h1<MainTitleProps>`
@@ -112,9 +116,9 @@ const MainTitle = styled.h1<MainTitleProps>`
   @media (max-width: 480px) {
     font-size: 35px;
   }
-  ${props => props.$black && css`
-    -webkit-text-stroke: 1px #000;
-    color: #000;
+  ${props => props.$full && css`
+    //-webkit-text-stroke: 1px #000;
+    color: #fff;
     max-width: 100%;
     @media (max-width: 1025px) {
       -webkit-text-stroke: 1px #fff;

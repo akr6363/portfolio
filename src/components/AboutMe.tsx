@@ -3,6 +3,7 @@ import styled, {css} from "styled-components";
 import AboutMePhoto from '../img/aboutMePhoto.png'
 import {Button, Container, Section, SectionTitle} from "../assets/styles/stylesComponents";
 import {SocialNetworks} from "./SocialNetworks";
+
 const Fade = require("react-reveal/Fade")
 
 
@@ -10,56 +11,34 @@ const AboutMe = () => {
     return (
         <Section id={'about-me'}>
             <Fade cascade>
-            <Container>
-                <SectionTitle>ABOUT ME</SectionTitle>
-                <AboutMeBlock>
-                    <AboutMeLeft>
-                        <MePhoto>
-                            <img src={AboutMePhoto} alt=""/>
-                        </MePhoto>
-                    </AboutMeLeft>
-                    <AboutMeRight>
-                        <AboutMeTitle>I’m Anya</AboutMeTitle>
-                        <AboutMeSubTitle>Frontend Developer </AboutMeSubTitle>
-                        <AboutMeText>
-                            Hi! My name is Albert Walkers. I am a Web Developer, and I'm very passionate and dedicated
-                            to
-                            my work. With 20 years experience as a professional Web developer, I have acquired the
-                        </AboutMeText>
-                        <AboutMeText>
-                            Hi! My name is Albert Walkers. I am a Web Developer, and I'm very passionate and dedicated
-                            to
-                            my work. With 20 years experience as a professional Web developer, I have acquired the
-                            skills and knowledge necessary to make your project a success.
-                        </AboutMeText>
-
-                        {/*<Table>*/}
-                        {/*    <TableRow>*/}
-                        {/*        <td>Age:</td>*/}
-                        {/*        <td>24</td>*/}
-                        {/*    </TableRow>*/}
-                        {/*    <TableRow>*/}
-                        {/*        <td>English:</td>*/}
-                        {/*        <td>Pre-Intermediate</td>*/}
-                        {/*    </TableRow>*/}
-                        {/*    <TableRow>*/}
-                        {/*        <td>Phone:</td>*/}
-                        {/*        <td>+7-964-614-58-37</td>*/}
-                        {/*    </TableRow>*/}
-                        {/*    <TableRow>*/}
-                        {/*        <td>Location:</td>*/}
-                        {/*        <td>Saint-Petersburg</td>*/}
-                        {/*    </TableRow>*/}
-                        {/*    <TableRow>*/}
-                        {/*        <td>Mail:</td>*/}
-                        {/*        <td>akr6363@mail.ru</td>*/}
-                        {/*    </TableRow>*/}
-                        {/*</Table>*/}
-                        <SocialNetworks style={{ marginBottom: "25px" }}/>
-                        <Button>Download CV</Button>
-                    </AboutMeRight>
-                </AboutMeBlock>
-            </Container>
+                <Container>
+                    <SectionTitle>ABOUT ME</SectionTitle>
+                    <AboutMeBlock>
+                        <AboutMeLeft>
+                            <MePhoto>
+                                <img src={AboutMePhoto} alt=""/>
+                            </MePhoto>
+                        </AboutMeLeft>
+                        <AboutMeRight>
+                            <AboutMeTitle>I’m Anya</AboutMeTitle>
+                            <AboutMeSubTitle>Frontend Developer </AboutMeSubTitle>
+                            <AboutMeText>
+                                Hello! I'm frontend developer with
+                                experience in creating SPA using
+                                React, Redux, TypeScript. I have Knowledge in user interface,
+                                testing, and debugging processes.
+                            </AboutMeText>
+                            <AboutMeText>
+                                I am passionate about new technologies and always strive to develop in my profession. I
+                                follow the best development practices and proper application architecture.I am ready to
+                                take on new challenges and develop together with a team of professionals, creating
+                                high-quality products that improve the lives of users.
+                            </AboutMeText>
+                            <SocialNetworks style={{marginBottom: "25px"}}/>
+                            <Button>Download CV</Button>
+                        </AboutMeRight>
+                    </AboutMeBlock>
+                </Container>
             </Fade>
         </Section>
     );

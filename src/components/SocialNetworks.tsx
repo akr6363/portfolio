@@ -13,11 +13,11 @@ type SocialNetworksPropsType = {
 export const SocialNetworks: FC<SocialNetworksPropsType> = ({style}) => {
     return (
         <SocialBlock style={style}>
-            <a href='#'><IconTg/></a>
-            <a href='#'><IconInst/></a>
-            <a href='#'><IconMail/></a>
+            <a href="https://t.me/akr6363" target={'_blank'}><IconTg/></a>
+            <a href='https://www.instagram.com/akr6363' target={'_blank'}><IconInst/></a>
+            <a href="mailto:akr6363@mail.ru"><IconMail/></a>
             <a href='#'><IconLn/></a>
-            <a href='#'><IconGit/></a>
+            <a href='https://github.com/akr6363?tab=repositories' target={'_blank'}><IconGit/></a>
         </SocialBlock>
     );
 };

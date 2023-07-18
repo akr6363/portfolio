@@ -1,22 +1,30 @@
 import React from 'react';
 import styled from "styled-components";
 import {Button} from "../../assets/styles/stylesComponents";
+
 const Fade = require("react-reveal/Fade")
 
 type ProjectItemType = {
     title: string
     description: string
     img: string
+    viewLink: string
+    sourcesLink: string
 }
 
 
-const ProjectItem: React.FC<ProjectItemType> = ({title, description, img}) => {
+const ProjectItem: React.FC<ProjectItemType> = ({title, description, img, viewLink, sourcesLink}) => {
     return (
         <ProjectItemBlock>
             <ProjectImg>
                 <img src={img} alt=""/>
                 <HoverBlock>
-                    <Button>View</Button>
+                    <a href={viewLink} target="_blank">
+                        <Button>View</Button>
+                    </a>
+                    <a href={sourcesLink} target="_blank">
+                        <Button>Sources</Button>
+                    </a>
                 </HoverBlock>
             </ProjectImg>
             <div>
@@ -42,6 +50,11 @@ export const HoverBlock = styled.div`
   align-items: center;
   justify-content: center;
   transition: opacity 0.3s ease-in-out;
+
+  a:not(:last-child) {
+    margin-right: 10px;
+
+  }
 `
 
 const ProjectItemBlock = styled.div`

@@ -15,6 +15,9 @@ export const Container = styled.div<ContainerProps> `
   ${props => props.$alignRight && css`
     display: flex;
     justify-content: end;
+    @media (max-width: 650px) {
+      justify-content: start;
+    }
   `}
   ${props => props.$contactsContainer && css`
     display: flex;
