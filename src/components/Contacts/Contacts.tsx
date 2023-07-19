@@ -44,7 +44,7 @@ export const Contacts = () => {
         },
         onSubmit: (values, {resetForm, setFieldValue, setStatus, setFieldError}) => {
             setStatus('Please wait...')
-            axios.post('http://localhost:3010/senMessage', values)
+            axios.post('https://gmail-node-js-lyart.vercel.app/senMessage', values)
                 .then(() => {
                     resetForm()
                     setFieldValue('message', '')
