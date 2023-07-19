@@ -35,7 +35,7 @@ const AboutMe = () => {
                                 high-quality products that improve the lives of users.
                             </AboutMeText>
                             <SocialNetworks style={{marginBottom: "25px"}}/>
-                            <Button>Download CV</Button>
+                            <a href="CV.pdf" target="_blank" download><Button>Download CV</Button></a>
                         </AboutMeRight>
                     </AboutMeBlock>
                 </Container>
