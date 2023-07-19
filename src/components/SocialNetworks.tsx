@@ -17,7 +17,7 @@ export const SocialNetworks: FC<SocialNetworksPropsType> = ({style}) => {
             <a href='https://www.instagram.com/akr6363' target={'_blank'}><IconInst/></a>
             <a href="mailto:akr6363@mail.ru"><IconMail/></a>
             <a href='#'><IconLn/></a>
-            <a href='https://github.com/akr6363?tab=repositories' target={'_blank'}><IconGit/></a>
+            <a href='https://github.com/akr6363' target={'_blank'}><IconGit/></a>
         </SocialBlock>
     );
 };
